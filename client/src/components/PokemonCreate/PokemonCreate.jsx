@@ -88,7 +88,7 @@ export default function PokemonCreate() {
   function handleSubmit(e) {
     e.preventDefault();
     Swal.fire({
-      text: "Create Course Successfully",
+      text: "Create Pokemon Successfully",
       icon: "success",
       confirmButtonText: "OK",
     }).then((result) => {

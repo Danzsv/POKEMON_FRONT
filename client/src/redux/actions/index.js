@@ -81,7 +81,7 @@ export function postPokemon(payload) {
         `https://pokemonapi-liodandev.up.railway.app/api/pokemons`,
         payload
       );
-      dispatch({
+      return dispatch({
         type: POST_POKEMON,
       });
     } catch (error) {}
