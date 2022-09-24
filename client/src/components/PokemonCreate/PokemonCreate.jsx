@@ -8,6 +8,7 @@ import {
   postPokemon,
 } from "../../redux/actions";
 import styles from "./PokemonCreate.module.css";
+import Swal from "sweetalert2";
 
 export default function PokemonCreate() {
   const dispatch = useDispatch();
