@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export const GET_POKEMONS = "GET_POKEMONS";
 export const GET_TYPES = "GET_TYPES";
@@ -75,19 +76,20 @@ export function getPokemonById(id) {
 // ==========================CREATE POKEMON ============================
 export function postPokemon(payload) {
   return async function (dispatch) {
-    const response = await axios.post(
-      `https://pokemonapi-liodandev.up.railway.app/api/pokemons`,
-      payload
-    );
-    // const response = await axios.post(
-    // `http://localhost:3002/api/pokemons`,
-    // payload
-    // );
-    // console.log(response)
-    dispatch({
-      type: POST_POKEMON,
+    try {
+      const response = await axios.post(
+        `https://pokemonapi-liodandev.up.railway.app/api/pokemons`,
+        payload
+      );
+      dispatch({
+        type: POST_POKEMON,
+      });
+    } catch (error) {}
+    return Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong!",
     });
-    return response;
   };
 }
 // ==========================FYLTER BY TYPE ============================
@@ -134,16 +136,19 @@ export function cleanFilter() {
 
 export function deleteBy(id) {
   return async function (dispatch) {
-    await axios
-      .delete(`https://pokemonapi-liodandev.up.railway.app/api/pokemons/${id}`)
-      .then(() => {
-        alert("Pokemon deleted succesfully");
-        return dispatch({
-          type: DELETE_POKEMON,
-        });
-      })
-      .catch((e) => {
-        return alert("Something went wrong");
+    try {
+      await axios.delete(
+        `https://pokemonapi-liodandev.up.railway.app/api/pokemons/${id}`
+      );
+      return dispatch({
+        type: DELETE_POKEMON,
       });
+    } catch (error) {
+      return Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    }
   };
 }

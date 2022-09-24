@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import styles from "./Detail.module.css";
 import pokedex from "../images/pokedex.png";
 import loading from "../images/pkball.gif";
+import Swal from "sweetalert2";
 
 export default function Detail(props) {
   // console.log(props)
@@ -31,13 +32,45 @@ export default function Detail(props) {
   }, [dispatch]);
 
   function handlerDelete(id) {
-    dispatch(deleteBy(id));
-    history.push("/home");
+    swalWithBootstrapButtons
+      .fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "No, cancel!",
+        reverseButtons: true,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+            "Deleted!",
+            "Your pokemon has been deleted.",
+            "success"
+          );
+          dispatch(deleteBy(id));
+          history.push("/home");
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            "Cancelled",
+            "Your imaginary pokemon is safe :)",
+            "error"
+          );
+        }
+      });
   }
 
-  console.log(Object.keys(myPokemon).length);
-  console.log(myPokemon.hp);
-  console.log(myPokemon._id);
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn btn-success",
+      cancelButton: "btn btn-danger",
+    },
+    buttonsStyling: false,
+  });
   //uwu
 
   return (

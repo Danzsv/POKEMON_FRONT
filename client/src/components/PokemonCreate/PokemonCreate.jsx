@@ -86,23 +86,29 @@ export default function PokemonCreate() {
   }
   function handleSubmit(e) {
     e.preventDefault();
-
-    dispatch(postPokemon(input));
-    alert("Personaje Creado uwu");
-    setInput({
-      name: "",
-      hp: 0,
-      attack: 0,
-      defense: 0,
-      speed: 0,
-      height: 0,
-      weight: 0,
-      image: "",
-      firstType: [],
-      secondType: [],
-      custom: true,
+    Swal.fire({
+      text: "Create Course Successfully",
+      icon: "success",
+      confirmButtonText: "OK",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch(postPokemon(input));
+        setInput({
+          name: "",
+          hp: 0,
+          attack: 0,
+          defense: 0,
+          speed: 0,
+          height: 0,
+          weight: 0,
+          image: "",
+          firstType: [],
+          secondType: [],
+          custom: true,
+        });
+        history.push("/home");
+      }
     });
-    history.push("/home");
   }
 
   const uppInitial = (str) => str[0].toUpperCase() + str.slice(1);
