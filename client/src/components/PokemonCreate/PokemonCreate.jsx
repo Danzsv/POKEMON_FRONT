@@ -156,7 +156,7 @@ export default function PokemonCreate() {
     } else if (!input.weight) {
       someErrors.weight = "WEIGHT is required";
     } else if (!input.image) {
-      someErrors.image = "IMAGEN is required";
+      someErrors.image = "IMAGE is required";
     } else if (!pattern.test(input.image)) {
       someErrors.image = "Url is not valid";
     } else if (reg_exUrl.test(input.image)) {
