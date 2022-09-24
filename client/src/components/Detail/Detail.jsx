@@ -19,8 +19,9 @@ export default function Detail(props) {
   const dispatch = useDispatch();
 
   const uppInitial = (str) => str[0].toUpperCase() + str.slice(1);
-  let idPoke = myPokemon._id;
-
+  let idPoke = props.match.params.id;
+  // let idPoke = myPokemon._id;
+  let idMongo = myPokemon && myPokemon._id;
   useEffect(() => {
     dispatch(getPokemonById(idPoke));
 
@@ -121,7 +122,7 @@ export default function Detail(props) {
             {myPokemon.custom && (
               <button
                 className={styles.pokeButtonX}
-                onClick={() => handlerDelete(idPoke)}
+                onClick={() => handlerDelete(idMongo)}
               >
                 X
               </button>
