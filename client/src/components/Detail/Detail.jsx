@@ -36,6 +36,7 @@ export default function Detail(props) {
 
   console.log(Object.keys(myPokemon).length);
   console.log(myPokemon.hp);
+  //uwu
 
   return (
     <div className={styles.container}>
