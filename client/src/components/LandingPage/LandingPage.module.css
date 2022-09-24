@@ -1,0 +1,28 @@
+.video{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    height: 66.7%;
+    object-fit: cover;
+    transform: translate(-50%,-50%);
+    
+    
+}
+
+.bgImage{
+    background-image: url('../images/gba_bg.png');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: fixed;
+    /* background-image: url('https://www.videogamer.com/wp-content/uploads/Pokemon-Unite-main.png'); */
+    /* background-position: 100%;
+    background-size: cover;
+    height: 50%;
+    width: 100%; */
+    
+}

@@ -1,0 +1,296 @@
+@font-face {
+    font-family: pokeFont;
+    src: url("../images/Pokemon_GB.ttf")
+  }
+
+.card{
+    height: 400px;
+    width: 285px;
+    border: 10px solid black;
+    border-radius: 20px;
+    margin: 12px;
+    margin-right: 1px;
+    margin-top: 10px;    
+    padding: 0px;
+    background: rgb(252, 252, 252);
+}
+
+.card div{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;    
+    top: 10px;
+    
+}
+.card p{    
+    color: black;
+    position: relative;   
+    border-radius: 10px;
+    text-decoration: none;
+    padding:6px;    
+    font-family: pokeFont;
+    src: url("../images/Pokemon_GB.ttf");
+    font-size: 20px;    
+}
+
+.pokename{
+    color: black;
+    font-family: pokeFont;
+    src: url("../images/Pokemon_GB.ttf");
+    font-size: 25px;    
+    padding: 2px;
+    margin-bottom: -5px;    
+
+} 
+
+
+.type[value="grass"]{
+    background-color: #78C850;    
+    border: 4px solid black;
+    
+}
+
+.type[value="fire"]{
+    background-color: #e13806;    
+    border: 4px solid black;
+}
+
+.type[value="water"]{
+    background-color: #2d89e3;    
+    border: 4px solid black;
+}
+
+.type[value="bug"]{
+    background-color: #89960d;    
+    border: 4px solid black;
+}
+
+.type[value="normal"]{
+    background-color: #c4bfb5;   
+    border: 4px solid black;
+}
+
+.type[value="poison"]{
+    background-color: #8d418e;    
+    border: 4px solid black;
+}
+
+.type[value="electric"]{
+    background-color: #e69402;     
+    border: 4px solid black;
+}
+
+.type[value="ground"]{
+    background-color: #b19950;       
+    border: 4px solid black;
+}
+
+.type[value="fairy"]{
+    background-color: #f3aef4;       
+    border: 4px solid black;
+}
+
+.type[value="fighting"]{
+    background-color: #7e311b;      
+    border: 4px solid black;
+}
+
+.type[value="psychic"]{
+    background-color: #e7437b;      
+    border: 4px solid black;
+}
+
+.type[value="rock"]{
+    background-color: #b5a053;    
+    border: 4px solid black;
+    
+}
+
+.type[value="ghost"]{
+    background-color: #5d5db0;    
+    border: 4px solid black;
+}
+
+.type[value="ice"]{
+    background-color: #6bd3f4;    
+    border: 4px solid black;
+}
+
+.type[value="dragon"]{
+    background-color: #6f5bd5;    
+    border: 4px solid black;
+}
+
+.type[value="flying"]{
+    background-color: #5c73d3;    
+    border: 4px solid black;
+}
+
+.type[value="steel"]{
+    background-color: #b2b2c0;    
+    border: 4px solid black;
+}
+.containerTypes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80px;    
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.typeImg[value="grass"]{
+    background-image: url('./types_images/grass.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;      
+}
+
+.typeImg[value="fire"]{
+    background-image: url('./types_images/fire.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="water"]{
+    background-image: url('./types_images/water.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="bug"]{
+    background-image: url('./types_images/bug.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="normal"]{
+    background-image: url('./types_images/normal.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="poison"]{    
+    background-image: url('./types_images/poison.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;  
+}
+
+.typeImg[value="electric"]{
+    background-image: url('./types_images/electric.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="ground"]{
+    background-image: url('./types_images/ground.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="fairy"]{
+    background-image: url('./types_images/fairy.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="fighting"]{
+    background-image: url('./types_images/fighting.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="psychic"]{
+    background-image: url('./types_images/pyshic.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="rock"]{
+    background-image: url('./types_images/rock.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+    
+}
+
+.typeImg[value="ghost"]{
+    background-image: url('./types_images/ghost.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="ice"]{
+    background-image: url('./types_images/ice.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="dragon"]{
+    background-image: url('./types_images/dragon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="flying"]{
+    background-image: url('./types_images/flying.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}
+
+.typeImg[value="steel"]{
+    background-image: url('./types_images/steel.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width : 40px;
+    height: 40px;   
+}

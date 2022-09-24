@@ -1,0 +1,94 @@
+@font-face {
+    font-family: pokeFont;
+    src: url("../images/Pokemon_GB.ttf")
+  }
+/* 
+.text{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Press Start 2P' ,cursive;
+    font-weight: bold;
+    font-size: 1rem;
+    justify-content: center;
+    font-family: pokeFont;
+    src: url("../images/Pokemon_GB.ttf")
+}
+
+.page{
+    width:12px;
+    margin:1px;
+    padding:8px;
+    border: 0.13rem solid rgb(0, 0, 0);
+    border-radius: 15%;
+    background-color: rgba(21, 61, 145, 0.483);
+    cursor: pointer;
+} */
+
+.currentButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.arrow1{
+  background: url('./arrow_poke1.png');
+  background-size: cover;
+  height: 70px;
+  width:75px;
+  display: flex;  
+  border: transparent;
+}
+.arrow1:hover{
+  cursor: pointer;
+}
+
+.arrow2{
+  background: url('./arrow_poke2.png');
+  background-size: cover;
+  width:75px;
+  height: 70px;
+  display: flex;  
+  border: transparent;
+}
+
+.arrow2:hover{
+  cursor: pointer;
+}
+.paginated {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin: 0rem;
+  padding: 1rem;
+  font-family: pokeFont;
+  font-size: 20px;
+  src: url("../images/Pokemon_GB.ttf")
+}
+
+.paginated li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  background: url('./pokeCerrada4.png');
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.paginated .active {
+  background: url('./pokeAbierta4.png');
+  background-size: cover;
+  color: #fff;
+  font-weight: bold;
+  width: 70px;
+  height: 70px;
+}
