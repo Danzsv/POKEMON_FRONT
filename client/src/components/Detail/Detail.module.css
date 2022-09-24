@@ -207,6 +207,10 @@
 .pokeButton:hover{
   cursor: pointer;
 }
+.pokeButtonCustom:hover{
+  cursor: pointer;
+}
+
 
 .types{    
   display: flex;
