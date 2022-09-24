@@ -159,8 +159,7 @@
   transform: translate(19%, 0%);
 }
 
-
-.pokeButton{ 
+.pokeButtonCustom{
   transform: translateY(-830%) translateX(+100%);
   position: relative;
   height: 100px;
@@ -172,6 +171,22 @@
   background-position: center;
   background-size: cover;
   
+}
+.pokeButton{
+  transform: translateY(-830%) translateX(+140%);
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border-color: black;
+  box-shadow: 1px 1px 2px 2px black, -2px -2px 2px 2px black;
+  background-image: url('../images/submit_button.jpg');
+  background-position: center;
+  background-size: cover;
+  -webkit-transform: translateY(-830%) translateX(+140%);
+  -moz-transform: translateY(-830%) translateX(+140%);
+  -ms-transform: translateY(-830%) translateX(+140%);
+  -o-transform: translateY(-830%) translateX(+140%);
 }
 .pokeButtonX{ 
   transform: translateY(-170%) translateX(170%);

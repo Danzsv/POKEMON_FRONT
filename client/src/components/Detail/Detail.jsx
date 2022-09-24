@@ -162,7 +162,13 @@ export default function Detail(props) {
             )}
             <label>
               <Link to="/home">
-                <button className={styles.pokeButton}></button>{" "}
+                <button
+                  className={
+                    myPokemon.custom === true
+                      ? styles.pokeButtonCustom
+                      : styles.pokeButton
+                  }
+                ></button>{" "}
               </Link>
             </label>
             {/* onClick={() =>homeButtom() } */}
