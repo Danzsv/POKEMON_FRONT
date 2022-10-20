@@ -62,7 +62,7 @@ export function getNamePokemon(name) {
 
 export function getPokemonById(id) {
   return function (dispatch) {
-    fetch(`${API_URL}/${id}`)
+    fetch(`${API_URL}/pokemons/${id}`)
       .then((data) => data.json())
       .then((data) => {
         dispatch({
