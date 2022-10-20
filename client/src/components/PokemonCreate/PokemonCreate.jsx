@@ -9,6 +9,8 @@ import {
 } from "../../redux/actions";
 import styles from "./PokemonCreate.module.css";
 import Swal from "sweetalert2";
+import DragAndDrop from "../DragAndDrop/DragAndDrop";
+import Cloudinary from "../Cloudinary/Cloudinary";
 
 export default function PokemonCreate() {
   const dispatch = useDispatch();
@@ -16,6 +18,8 @@ export default function PokemonCreate() {
   const allPokemon = useSelector((state) => state.pokemons);
   const history = useHistory();
   const [errors, setErrors] = useState({});
+  const [cloudinary, setCloudinary] = useState({});
+  const pushCloud = [];
   const [input, setInput] = useState({
     name: "",
     hp: 0,
@@ -105,6 +109,7 @@ export default function PokemonCreate() {
           image: "",
           firstType: [],
           secondType: [],
+          // postImages: pushCloud,
           custom: true,
         });
         history.push("/home");
@@ -407,6 +412,9 @@ export default function PokemonCreate() {
               <img className={styles.preview} src={input.image}></img>
             </div>
           )}
+          {/* <DragAndDrop pushCloud={pushCloud} setCloudinary={setCloudinary} /> */}
+          {/* <Cloudinary setCloudinary={setCloudinary} /> */}
+          {/* <img src={cloudinary.url} /> */}
         </div>
 
         <button

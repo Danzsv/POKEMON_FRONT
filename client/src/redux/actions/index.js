@@ -1,6 +1,8 @@
 import axios from "axios";
 import Swal from "sweetalert2";
 
+import { API_URL } from "./constants";
+
 export const GET_POKEMONS = "GET_POKEMONS";
 export const GET_TYPES = "GET_TYPES";
 export const FILTER_BY_TYPE = "FILTER_BY_TYPE";
@@ -18,7 +20,7 @@ export const UPDATE_POKE = "UPDATE_POKE";
 // ================================GET POKEMONS===================================
 export function getPokemons() {
   return function (dispatch) {
-    return fetch("https://pokemonapi-liodandev.up.railway.app/api/pokemons")
+    return fetch(`${API_URL}/pokemons`)
       .then((data) => data.json())
       .then((data) => {
         dispatch({
@@ -31,7 +33,7 @@ export function getPokemons() {
 // =========================== GET TYPES ============================
 export function getTypes() {
   return function (dispatch) {
-    return fetch("https://pokemonapi-liodandev.up.railway.app/api/types")
+    return fetch(`${API_URL}/types`)
       .then((data) => data.json())
       .then((data) => {
         dispatch({
@@ -45,9 +47,7 @@ export function getTypes() {
 
 export function getNamePokemon(name) {
   return function (dispatch) {
-    fetch(
-      `https://pokemonapi-liodandev.up.railway.app/api/pokemons?name=${name}`
-    )
+    fetch(`${API_URL}/pokemons?name=${name}`)
       .then((data) => data.json())
       .then((data) => {
         dispatch({
@@ -62,7 +62,7 @@ export function getNamePokemon(name) {
 
 export function getPokemonById(id) {
   return function (dispatch) {
-    fetch(`https://pokemonapi-liodandev.up.railway.app/api/pokemons/${id}`)
+    fetch(`${API_URL}/${id}`)
       .then((data) => data.json())
       .then((data) => {
         dispatch({
@@ -77,10 +77,7 @@ export function getPokemonById(id) {
 export function postPokemon(payload) {
   return async function (dispatch) {
     try {
-      const response = await axios.post(
-        `https://pokemonapi-liodandev.up.railway.app/api/pokemons`,
-        payload
-      );
+      const response = await axios.post(`${API_URL}/pokemons`, payload);
       return dispatch({
         type: POST_POKEMON,
       });
@@ -137,9 +134,7 @@ export function cleanFilter() {
 export function deleteBy(id) {
   return async function (dispatch) {
     try {
-      await axios.delete(
-        `https://pokemonapi-liodandev.up.railway.app/api/pokemons/${id}`
-      );
+      await axios.delete(`${API_URL}/pokemons/${id}`);
       return dispatch({
         type: DELETE_POKEMON,
       });
